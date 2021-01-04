@@ -1,6 +1,6 @@
 ### Como consumir a API
 
-O consumo da API deve ser feito através de uma requisição do tipo GET passando como paramêtro o ID do vídeo no Youtube: 
+O consumo da API deve ser feito através de uma requisição do tipo GET passando como parâmetro o ID do vídeo no Youtube: 
 
 ```` /v1/api/{id} //Em caso de erro o servidor retorna o status code 500 ```` 
 
