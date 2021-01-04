@@ -1,8 +1,0 @@
-{
-    "name": "youtube-downloader-api",
-    "description": "Youtube downloader",
-    "version": "1.0.0",
-    "engines": {
-      "node": "12.x"
-    }
-  }
