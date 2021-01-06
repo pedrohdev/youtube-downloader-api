@@ -2,7 +2,7 @@
 
 O consumo da API deve ser feito através de uma requisição do tipo GET passando como parâmetro o ID do vídeo no Youtube: 
 
-```` /v1/api/{id} //Em caso de erro o servidor retorna o status code 500 ```` 
+```` /api/v1/{id} //Em caso de erro o servidor retorna o status code 500 ```` 
 
 **Exemplo:**
 ````
@@ -33,7 +33,7 @@ http://gotube-api-com.umbler.net/v1/api/EW7m2WIvFgQ //Neste caso estamos utiliza
 
 - Express | ```` npm install express --save ````
 - fileGetContents | ````  npm install file-get-contents ````
-
+- cors | ```` npm install cors ````
 ### Andamento
 - [x] Estruturação do projeto
 - [x] Scraping e filtração dos dados
