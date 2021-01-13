@@ -8,7 +8,7 @@ O consumo da API deve ser feito através de uma requisição do tipo GET passand
 
 **Exemplo:**
 ````
-http://gotube-api-com.umbler.net/api/v1/sTV61xqilso //Neste caso estamos utilizando um ID real de um vídeo
+http://localhost:3000/api/v1/sTV61xqilso //Neste caso estamos utilizando um ID real de um vídeo
 
 //Retorna
 
