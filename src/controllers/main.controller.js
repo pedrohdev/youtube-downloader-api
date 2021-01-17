@@ -4,8 +4,6 @@ module.exports = {
     getData: async (id) => {
         let info = await fileGetContents(`https://www.youtube.com/get_video_info?video_id=${id}`)
 
-        let test = info
-
         for(i = 0; i < info.split("#").join("&").split("&").length; i++){
 
             if(info.split("#").join("&").split("&")[i].split('=')[0] == 'player_response'){
@@ -13,26 +11,21 @@ module.exports = {
                 info = await JSON.parse(decodeURIComponent(info.split("#").join("&").split("&")[i].split('=')[1]))
                 
                 let videos = []
+
+                for(j = 0; j < info.streamingData.formats.length; j++){
                 
-                if(info.streamingData.formats.length == ''){
-                    return {"error": "error"}
-                }else{
 
-                    for(j = 0; j < info.streamingData.formats.length; j++){
-                    
-
-                        videos.push({
-                            src: info.streamingData.formats[j]['url'],
-                            quality: info.streamingData.formats[j].qualityLabel
-                        })
+                    videos.push({
+                        src: info.streamingData.formats[j]['url'],
+                        quality: info.streamingData.formats[j].qualityLabel
+                    })
 
 
-
-                    }
-
-                    return {"videos": videos}
 
                 }
+
+                return {"videos": videos}
+
 
             }else if(info.split("#").join("&").split("&")[i].split('=')[0] == 'status' && info.split("#").join("&").split("&")[i].split('=')[1] == 'fail'){
                 throw 'Video not found'
