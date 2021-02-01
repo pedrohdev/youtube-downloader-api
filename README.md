@@ -1,4 +1,4 @@
-:warning: **Este repositório deve ser utilizado apenas para uso pessoal, baixar material protegido por direitos autorais é contra os [termos de serviço do YouTube](https://www.youtube.com/static?gl=BR&template=terms)**
+:warning: **Este repositório deve ser utilizado apenas para meios de estudo, baixar material protegido por direitos autorais é contra os [termos de serviço do YouTube](https://www.youtube.com/static?gl=BR&template=terms)**
 
 ### Como consumir a API
 
