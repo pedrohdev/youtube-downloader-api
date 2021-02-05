@@ -4,7 +4,7 @@ module.exports = {
     getData: async (id) => {
         let info = await fileGetContents(`https://www.youtube.com/get_video_info?video_id=${id}`)
 
-        for(i = 0; i < info.split("#").join("&").split("&").length; i++){
+        for(let i = 0; i < info.split("#").join("&").split("&").length; i++){
 
             if(info.split("#").join("&").split("&")[i].split('=')[0] == 'player_response'){
 
@@ -12,7 +12,7 @@ module.exports = {
                 
                 let videos = []
 
-                for(j = 0; j < info.streamingData.formats.length; j++){
+                for(let j = 0; j < info.streamingData.formats.length; j++){
                 
 
                     videos.push({
